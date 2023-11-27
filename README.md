@@ -15,10 +15,9 @@ Onix Billetera Virtual es una aplicación innovadora diseñada para simplificar 
 - **Visualización Gráfica:** Obtén insights visuales de tus gastos e ingresos para una mejor toma de decisiones.
 - **Historial Completo:** Accede a un historial detallado de todas tus transacciones.
 
-
 ## Instalación
 
-1. Clona este repositorio: `git clone https://github.com/tuusuario/onix-billetera-virtual.git`
+1. Clona este repositorio: `git clone https://github.com/tuusuario/onix-billeter.git`
 2. Abre la carpeta del proyecto en Android Studio.
 3. Ejecuta la aplicación en tu dispositivo o emulador.
 
@@ -27,5 +26,5 @@ Onix Billetera Virtual es una aplicación innovadora diseñada para simplificar 
 - **Camilo Rivera** - [@camilo-rivera](https://camilorivera.co)
 
 ## Problemas y Sugerencias
-Si encuentras algún problema o tienes sugerencias para mejorar la aplicación, no dudes en abrir un [issue](https://github.com/tuusuario/onix-billetera-virtual/issues).
+Si encuentras algún problema o tienes sugerencias para mejorar la aplicación, no dudes en abrir un [issue](https://github.com/JCamiloRiveraP/onix-billetera).
 ¡Esperamos que disfrutes de Onix Billetera Virtual! 👛💻
