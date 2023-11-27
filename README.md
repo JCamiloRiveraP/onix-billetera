@@ -17,7 +17,7 @@ Onix Billetera Virtual es una aplicación innovadora diseñada para simplificar 
 
 ## Instalación
 
-1. Clona este repositorio: `git clone https://github.com/tuusuario/onix-billeter.git`
+1. Clona este repositorio: `git clone https://github.com/tuusuario/onix-billetera.git`
 2. Abre la carpeta del proyecto en Android Studio.
 3. Ejecuta la aplicación en tu dispositivo o emulador.
 
