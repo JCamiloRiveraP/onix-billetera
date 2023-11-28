@@ -77,10 +77,10 @@ private fun ContributorsUi(
                     TopAppBarTitle(
                         title = when (uiState.contributorsResponse) {
                             is ContributorsResponse.Error, ContributorsResponse.Loading ->
-                                "Contributors"
+                                "Contribuciones"
 
                             is ContributorsResponse.Success ->
-                                "${uiState.contributorsResponse.contributors.size} Contributors"
+                                "${uiState.contributorsResponse.contributors.size} Contribuciones"
                         }
                     )
                 },
@@ -100,7 +100,7 @@ private fun ContributorsUi(
         },
         floatingActionButton = {
             GitHubButton {
-                browser.openUri("https://github.com/Ivy-Apps/ivy-wallet")
+                browser.openUri("https://github.com/JCamiloRiveraP/onix-billetera")
             }
         }
     )
@@ -109,7 +109,7 @@ private fun ContributorsUi(
 @Composable
 private fun TopAppBarTitle(title: String) {
     Text(
-        text = title,
+        text = "Contribuciones",
         maxLines = 1,
         overflow = TextOverflow.Ellipsis
     )
@@ -160,12 +160,12 @@ private fun LazyListScope.content(
             }
         }
 
-        ContributorsResponse.Loading -> item(key = "Loading") {
+        ContributorsResponse.Loading -> item(key = "Cargando") {
             LoadingState()
         }
 
         is ContributorsResponse.Success -> {
-            item(key = "Project info") {
+            item(key = "Info de proyecto") {
                 ProjectInfoContent(contributorsState = contributorsState)
             }
 
@@ -208,7 +208,7 @@ private fun ProjectInfoRow(
             },
             info = "${projectRepositoryInfo.projectInfo.forks} forks",
             onClick = {
-                browser.openUri("https://github.com/Ivy-Apps/ivy-wallet/fork")
+                browser.openUri("https://github.com/JCamiloRiveraP/onix-billetera/fork")
             }
         )
 
@@ -222,7 +222,7 @@ private fun ProjectInfoRow(
                     contentDescription = "Stars"
                 )
             },
-            info = "${projectRepositoryInfo.projectInfo.stars} stars",
+            info = "2 estrellas",
             onClick = {
                 browser.openUri(projectRepositoryInfo.projectInfo.url)
             }
@@ -245,7 +245,7 @@ private fun ProjectInfoButton(
 
         Spacer(modifier = Modifier.width(4.dp))
 
-        Text(info)
+
     }
 }
 
@@ -268,7 +268,7 @@ private fun ContributorsErrorState(
         ElevatedButton(
             onClick = onClick
         ) {
-            Text(text = "Try again")
+            Text(text = "Volver a intentar")
         }
     }
 }
@@ -277,7 +277,7 @@ private fun ContributorsErrorState(
 private fun LoadingState(modifier: Modifier = Modifier) {
     Text(
         modifier = modifier,
-        text = "Loading..."
+        text = "Cargando..."
     )
 }
 
@@ -314,7 +314,7 @@ private fun ContributorCard(contributor: Contributor) {
                 modifier = Modifier.padding(horizontal = 12.dp)
             ) {
                 Text(
-                    text = contributor.name,
+                    text = "Camilo Rivera",
                     style = MaterialTheme.typography.bodyLarge,
                     fontWeight = FontWeight.W600,
                 )
@@ -322,7 +322,7 @@ private fun ContributorCard(contributor: Contributor) {
                 Text(
                     text = when (contributor.contributionsCount.toInt()) {
                         1 -> "1 contribution"
-                        else -> "${contributor.contributionsCount} contributions"
+                        else -> "Felipe Contribuciones"
                     },
                     style = MaterialTheme.typography.bodySmall
                 )

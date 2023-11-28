@@ -103,10 +103,10 @@ private fun ImportUI(
                 Spacer8()
                 Text(
                     text = """
-                !!!⚠️WARNING: Importing may duplicate transactions!!!
-                Duplicate transactions can NOT be easily deleted and you'll need to remove manually each one of them! 
-                Reason: We can't parse transaction ids because Ivy Wallet works only with UUID and other apps don't.
-                If you're starting fresh, no worries - kindly ignore this message.
+                !!!⚠️ADVERTENCIA: La importación puede duplicar transacciones!!!
+                ¡Las transacciones duplicadas NO se pueden eliminar fácilmente y deberás eliminar manualmente cada una de ellas!
+                 Motivo: no podemos analizar los identificadores de transacciones porque Ivy Wallet solo funciona con UUID y otras aplicaciones no.
+                 Si está empezando de nuevo, no se preocupe: ignore este mensaje.
                     """.trimIndent(),
                     style = UI.typo.c.colorAs(UI.colors.red),
                     fontWeight = FontWeight.Bold,
@@ -300,8 +300,8 @@ fun LazyListScope.sectionDivider(text: String) {
         Text(text = text, style = UI.typo.b1)
         Text(
             text = """
-                Match the CSV column with the appropriate Ivy type.
-                If the parsing is successful the border will turn green.
+                Haga coincidir la columna CSV con el tipo de Onix apropiado.
+                 Si el análisis tiene éxito, el borde se volverá verde.
             """.trimIndent(),
             style = UI.typo.nB2,
             color = UI.colors.gray
@@ -316,7 +316,7 @@ fun LazyListScope.importantFields(
     importantFields: ImportantFields,
     onEvent: (com.ivy.importdata.csv.CSVEvent) -> Unit
 ) {
-    sectionDivider("Important")
+    sectionDivider("Importante")
     mappingRow(
         columns = columns,
         mapping = importantFields.amount,
@@ -451,9 +451,9 @@ private fun TypeMetadata(
         }
     )
     Spacer8()
-    Text(text = "(optional)", style = UI.typo.c)
+    Text(text = "(opcional)", style = UI.typo.c)
     LabelContainsField(
-        label = "Transfer",
+        label = "Transferir",
         value = metadata.transfer ?: "",
         onValueChange = {
             onTypeMetaEvent(metadata.copy(transfer = it))
@@ -492,11 +492,11 @@ private fun DateMetadataUI(
     metadata: DateMetadata,
     onEvent: (com.ivy.importdata.csv.CSVEvent) -> Unit,
 ) {
-    Text(text = "Which is first in the format?")
+    Text(text = "¿Cuál es el primero en el formato?")
     Row {
         EnabledButton(
             enabled = metadata == DateMetadata.DateFirst,
-            text = "Date/Day (1,2,3...31)",
+            text = "Fecha/Día (1,2,3...31)",
             onClick = {
                 onEvent(com.ivy.importdata.csv.CSVEvent.DataMetaChange(DateMetadata.DateFirst))
             }
@@ -504,7 +504,7 @@ private fun DateMetadataUI(
         Spacer8(horizontal = true)
         EnabledButton(
             enabled = metadata == DateMetadata.MonthFirst,
-            text = "Month (1,2..12 / Jan, Feb..Dec)",
+            text = "Mes (1,2..12 / Ene, Feb..Dic)",
             onClick = {
                 onEvent(com.ivy.importdata.csv.CSVEvent.DataMetaChange(DateMetadata.MonthFirst))
             }

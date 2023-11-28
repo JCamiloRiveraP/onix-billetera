@@ -6,9 +6,9 @@ object Constants {
     const val URL_PRIVACY_POLICY =
         "https://github.com/JCamiloRiveraP"
 
-    const val URL_IVY_WALLET_REPO = "https://github.com/JCamiloRiveraP"
+    const val URL_IVY_WALLET_REPO = "https://github.com/JCamiloRiveraP/onix-billetera"
 
-    const val URL_ROADMAP = "https://github.com/JCamiloRiveraP"
+    const val URL_ROADMAP = "https://github.com/JCamiloRiveraP/onix-billetera"
 
     const val URL_HELP_CENTER = "https://www.instagram.com/camilorivera.co/"
 

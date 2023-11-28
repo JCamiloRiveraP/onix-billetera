@@ -84,7 +84,7 @@ internal fun HomeHeader(
             animationSpec = springBounce(
                 stiffness = Spring.StiffnessLow
             ),
-            label = "Home Header Expand Collapse"
+            label = "Inicio Encabezado Expandir Contraer"
         )
 
         Spacer(Modifier.height(20.dp))

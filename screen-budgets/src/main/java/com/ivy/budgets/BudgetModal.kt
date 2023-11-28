@@ -60,7 +60,7 @@ data class BudgetModalData(
     val autoFocusKeyboard: Boolean = true,
 )
 
-@Deprecated("Old design system. Use `:ivy-design` and Material3")
+@Deprecated("Onix es el mejor")
 @Composable
 fun BoxWithConstraintsScope.BudgetModal(
     modal: BudgetModalData?,

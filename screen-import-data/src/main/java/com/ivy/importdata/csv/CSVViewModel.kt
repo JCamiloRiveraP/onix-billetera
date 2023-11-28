@@ -52,8 +52,8 @@ class CSVViewModel @Inject constructor(
     // region Important fields
     private var amount by mutableStateOf(
         ColumnMapping(
-            ivyColumn = "Amount",
-            helpInfo = "The amount of the transactions, a positive number. Negative numbers will be made positive.",
+            ivyColumn = "Cantidad",
+            helpInfo = "El importe de las transacciones, un número positivo. Los números negativos se harán positivos.",
             name = "",
             index = -1,
             metadata = 1,
@@ -62,12 +62,12 @@ class CSVViewModel @Inject constructor(
     )
     private var type by mutableStateOf(
         ColumnMapping(
-            ivyColumn = "Transaction Type",
+            ivyColumn = "Tipo de transacción",
             helpInfo = """
-                Select the column that determines the transaction type.
-                The type of the transaction. Can be Income, Expense or a Transfer.
-                If the type is determined by the transaction's amount -> simply select the
-                amount column and we'll do our best to match it automatically.
+                Seleccione la columna que determina el tipo de transacción.
+                 El tipo de transacción. Puede ser un Ingreso, un Gasto o una Transferencia.
+                 Si el tipo está determinado por el monto de la transacción -> simplemente seleccione el
+                 columna de cantidad y haremos todo lo posible para igualarla automáticamente.
             """.trimIndent(),
             name = "",
             index = -1,
@@ -81,10 +81,10 @@ class CSVViewModel @Inject constructor(
     )
     private var date by mutableStateOf(
         ColumnMapping(
-            ivyColumn = "Date",
+            ivyColumn = "Día",
             helpInfo = """
-                The date of the transaction. To help us parse it just tell us
-                whether the Date or the Month comes first.
+                La fecha de la transacción. Para ayudarnos a analizarlo solo díganos
+                 si la fecha o el mes van primero.
             """.trimIndent(),
             name = "",
             index = -1,
@@ -94,9 +94,9 @@ class CSVViewModel @Inject constructor(
     )
     private var account by mutableStateOf(
         ColumnMapping(
-            ivyColumn = "Account",
+            ivyColumn = "Cuenta",
             helpInfo = """
-                The account of the transaction.
+                La cuenta de la transacción..
             """.trimIndent(),
             name = "",
             index = -1,
@@ -106,11 +106,11 @@ class CSVViewModel @Inject constructor(
     )
     private var accountCurrency by mutableStateOf(
         ColumnMapping(
-            ivyColumn = "Account Currency",
+            ivyColumn = "Cuenta de dinero",
             helpInfo = """
-                The currency of the account that made the transaction.
-                In Ivy Wallet, transactions don't have a currency but inherit
-                the ones from their account.
+                La moneda de la cuenta que realizó la transacción.
+                 En Ivy Wallet las transacciones no tienen moneda sino que heredan
+                 los de su cuenta.
             """.trimIndent(),
             name = "",
             index = -1,
@@ -123,10 +123,10 @@ class CSVViewModel @Inject constructor(
     // region Transfer fields
     private var toAccount by mutableStateOf(
         ColumnMapping(
-            ivyColumn = "To Account",
+            ivyColumn = "A la cuenta",
             helpInfo = """
-                The account receiving the transfer.
-                If you skip it, transfers won't be imported.
+                La cuenta que recibe la transferencia.
+                 Si lo omites, las transferencias no se importarán.
             """.trimIndent(),
             name = "",
             index = -1,
@@ -136,10 +136,10 @@ class CSVViewModel @Inject constructor(
     )
     private var toAccountCurrency by mutableStateOf(
         ColumnMapping(
-            ivyColumn = "To Account Currency",
+            ivyColumn = "A la moneda de la cuenta",
             helpInfo = """
-                The currency of the account that receives the transfer.
-                Skip it if there's no such.
+                La moneda de la cuenta que recibe la transferencia.
+                 Sáltelo si no existe tal.
             """.trimIndent(),
             name = "",
             index = -1,
@@ -149,10 +149,10 @@ class CSVViewModel @Inject constructor(
     )
     private var toAmount by mutableStateOf(
         ColumnMapping(
-            ivyColumn = "To Amount",
+            ivyColumn = "Al monto",
             helpInfo = """
-                The amount that the "To Account" will receive".
-                Skip it if there's no such.
+                El monto que recibirá el “A Cuenta”.
+                 Sáltelo si no existe tal.
             """.trimIndent(),
             name = "",
             index = -1,
@@ -165,9 +165,9 @@ class CSVViewModel @Inject constructor(
     // region Optional fields
     private var category by mutableStateOf(
         ColumnMapping(
-            ivyColumn = "Category",
+            ivyColumn = "Categoría",
             helpInfo = """
-                The category of the transaction.
+                La categoría de la transacción.
             """.trimIndent(),
             name = "",
             index = -1,
@@ -177,9 +177,9 @@ class CSVViewModel @Inject constructor(
     )
     private var title by mutableStateOf(
         ColumnMapping(
-            ivyColumn = "Title",
+            ivyColumn = "Titulo",
             helpInfo = """
-                The title of the transaction.
+                El título de la transacción.
             """.trimIndent(),
             name = "",
             index = -1,
@@ -189,9 +189,9 @@ class CSVViewModel @Inject constructor(
     )
     private var description by mutableStateOf(
         ColumnMapping(
-            ivyColumn = "Description",
+            ivyColumn = "Descripción",
             helpInfo = """
-                The description of the transaction.
+                La descripción de la transacción..
             """.trimIndent(),
             name = "",
             index = -1,

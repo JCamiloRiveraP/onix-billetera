@@ -534,9 +534,9 @@ private fun BoxWithConstraintsScope.DeleteModals(
                 account.name
             )
         } else {
-            "Please type \"${category?.name ?: ""}\" in order to delete your category."
+            "Please type \"${category?.name ?: ""}\" para eliminar tu categoría."
         },
-        hint = if (account != null) stringResource(id = R.string.account_name) else "Category name",
+        hint = if (account != null) stringResource(id = R.string.account_name) else "Nombre de la categoría",
         accountName = accountNameConfirmation,
         onAccountNameChange = updateAccountNameConfirmation,
         enableDeletionButton = enableDeletionButton,

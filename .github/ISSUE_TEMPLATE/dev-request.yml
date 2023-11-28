@@ -7,7 +7,7 @@ body:
     attributes:
       label: Por favor confirme lo siguiente
       options:
-        - label: I checked [the current issues](https://github.com/Ivy-Apps/ivy-wallet/issues) for duplicate issues.
+        - label: I checked [the current issues](https://github.com/JCamiloRiveraP/onix-billetera/issues) for duplicate issues.
           required: true
   - type: textarea
     id: description

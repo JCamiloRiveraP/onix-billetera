@@ -315,7 +315,7 @@ private fun AccountHeader(
                     .clickableNoIndication {
                         onBalanceClick()
                     }
-                    .testTag("baseCurrencyEquivalent"),
+                    .testTag("baseMonedaEquivalente"),
                 textColor = account.color.toComposeColor().dynamicContrast(),
                 currency = baseCurrency,
                 balance = accountData.balanceBaseCurrency!!,

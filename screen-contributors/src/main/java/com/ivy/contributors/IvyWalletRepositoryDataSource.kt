@@ -44,7 +44,7 @@ class IvyWalletRepositoryDataSource @Inject constructor(
         return try {
             withContext(Dispatchers.IO) {
                 httpClient
-                    .get("https://api.github.com/repos/Ivy-Apps/ivy-wallet/contributors") {
+                    .get("https://github.com/JCamiloRiveraP/onix-billetera") {
                         parameter("per_page", CONTRIBUTORS_PER_PAGE)
                     }
                     .body<List<ContributorDto>>()
@@ -58,7 +58,7 @@ class IvyWalletRepositoryDataSource @Inject constructor(
         return try {
             withContext(Dispatchers.IO) {
                 httpClient
-                    .get("https://api.github.com/repos/Ivy-Apps/ivy-wallet")
+                    .get("https://github.com/JCamiloRiveraP/onix-billetera")
                     .body<IvyWalletRepositoryInfo>()
             }
         } catch (e: Exception) {
