@@ -14,13 +14,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Java SDK
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: 'adopt'
           java-version: '18'
 
       - name: Enable Gradle Wrapper caching (optimization)
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             ~/.gradle/caches
@@ -40,13 +40,13 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Java SDK
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: 'adopt'
           java-version: '18'
 
       - name: Enable Gradle Wrapper caching (optimization)
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             ~/.gradle/caches
@@ -58,7 +58,7 @@ jobs:
         run: ./gradlew koverHtmlReport
 
       - name: Upload Code Coverage Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: code-coverage-report
           path: app/build/artifacts/reports/kover/coverageResults/index.html
